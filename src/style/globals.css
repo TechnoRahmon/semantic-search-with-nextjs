@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: #202020;
+  --background-start-rgb: #f3e7e9;
+  --background-end-rgb: #e3eeff;
+}
+
+body .tagify {
+  width: 100%;
+  overflow-y: auto;
+  flex:1;
+  color:black;
+  --tag-bg: rgb(51 65 85);
+  --tag-text-color: white;
+  --tag-text-color--edit: var(--tag-bg);
+  --tag-hover: rgb(100 116 139);
+  --tag-remove-btn-color: white;
+}
+body {
+  color: var(--foreground-rgb);
+  overflow-y: hidden;
+  font-family: 'DINNextLTArabic-Regular', sans-serif !important;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(var(--background-end-rgb))
+  )
+  rgb(var(--background-start-rgb)) !important;
+  
+}
+
+.tags-input{
+  width: 100% !important;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  box-sizing: border-box;
+  scrollbar-width: auto;
+  scrollbar-color: #344256 #cdc8c82e;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #ffffff00;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(203 213 225);
+  border-radius: 10px;
+  border: 1px solid transparent;
+  }
+.nav{
+  height: 5vh;
+}
+.boxmarkbox{
+  max-height: 65vh;
+  position: relative;
+}
+.content-text-box{
+  max-height: 48vh;
+}
+.separator{
+  height: 1px;
+  background: rgba(255, 255, 255, 0.507);
+}
+.vertical-seprator{
+  content: "";
+  position: relative;
+ /* Adjust this value to control the horizontal position of the line */
+  bottom:0px;
+  width: 1px; /* Adjust the width of the line */
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* White color with opacity */
+  /* Add any other styling you want for the line */
+}
+.text-xss{
+  font-size: 10px;
+}
